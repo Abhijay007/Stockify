@@ -45,11 +45,14 @@ app.layout = html.Div(
         html.Div(
             [
                 # Navigation
-                html.P("Welcome to the Stock Dash App!", className="start"),
+                html.P("Welcome to Stockify !!", className="start" ,id ="headingMain"),
                 html.Div([
-                    html.P("Input stock code: "),
+                    html.P("Input stock code: ",id="secondHead"),
                     html.Div([
-                        dcc.Input(id="dropdown_tickers", type="text"),
+                        dcc.Input(id="dropdown_tickers",
+                        type="text",
+                        className="firstInput",
+                        placeholder="enter code"),
                         html.Button("Submit", id='submit'),
                     ],
                              className="form")
@@ -65,13 +68,13 @@ app.layout = html.Div(
                          className="date"),
                 html.Div([
                     html.Button(
-                        "Stock Price", className="stock-btn", id="stock"),
+                        "Stock", className="stock-btn", id="stock"),
                     html.Button("Indicators",
                                 className="indicators-btn",
                                 id="indicators"),
                     dcc.Input(id="n_days",
                               type="text",
-                              placeholder="number of days"),
+                              placeholder="Number of days"),
                     html.Button(
                         "Forecast", className="forecast-btn", id="forecast")
                 ],
