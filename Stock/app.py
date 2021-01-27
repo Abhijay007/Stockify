@@ -187,6 +187,5 @@ def forecast(n, n_days, val):
     fig = prediction(val, int(n_days) + 1)
     return [dcc.Graph(figure=fig)]
 
-
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
